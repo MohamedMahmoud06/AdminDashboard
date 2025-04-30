@@ -4,14 +4,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap'
 import AddData from "./Components/Data/AddData/AddData";
 import Layout from './Components/Layout/Layout';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom";
 import Users from './Components/Users/Users';
 import Orders from "./Components/Orders/Orders";
 import Products from "./Components/Products/Products";
 import Home from './Components/Home/Home';
 
 function App() {
-  const router = createBrowserRouter([{path : '/' , element : <Layout /> , children : [
+  const router =createHashRouter([{path : '/' , element : <Layout /> , children : [
     {path : 'users', element : <Users /> }, 
     {path : 'orders', element : <Orders /> }, 
     {path : 'products', element : <Products /> }, 
